@@ -21,7 +21,7 @@ const useFirebase = () => {
                 const newUser = { email, displayName: name };
                 setUser(newUser);
                 // save user to the database
-                // saveUser(email, name, 'POST');
+                saveUserToDB(newUser, 'POST');
                 // send name to firebase after creation
                 updateProfile(auth.currentUser, {
                     displayName: name
@@ -63,6 +63,18 @@ const useFirebase = () => {
         signOut(auth)
             .then(() => { })
             .finally(() => setLoading(false));
+    }
+
+
+    const saveUserToDB = (user, method) => {
+        fetch('https://pacific-sands-70895.herokuapp.com/users', {
+            method: method,
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then()
     }
 
     //observer 
