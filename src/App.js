@@ -4,6 +4,7 @@ import Home from './Pages/Home/Home/Home';
 import Register from './Pages/Authentication/Register/Register';
 import AuthProvider from './context/AuthProvider';
 import Login from './Pages/Authentication/Login/Login';
+import ExploreInventory from './Pages/ExploreInventory/ExploreInventory/ExploreInventory';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
             </Route>
             <Route path="/login">
               <Login></Login>
+            </Route>
+            <Route path="/inventory">
+              <ExploreInventory></ExploreInventory>
             </Route>
             {/* <Route path="/about">
               <About></About>
