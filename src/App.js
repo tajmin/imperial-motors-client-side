@@ -5,6 +5,8 @@ import Register from './Pages/Authentication/Register/Register';
 import AuthProvider from './context/AuthProvider';
 import Login from './Pages/Authentication/Login/Login';
 import ExploreInventory from './Pages/ExploreInventory/ExploreInventory/ExploreInventory';
+import Purchase from './Pages/Purchase/Purchase/Purchase';
+
 
 function App() {
   return (
@@ -27,15 +29,16 @@ function App() {
             <Route path="/inventory">
               <ExploreInventory></ExploreInventory>
             </Route>
+            <Route path="/purchase/:id">
+              <Purchase></Purchase>
+            </Route>
             {/* <Route path="/about">
               <About></About>
             </Route>
             <Route path="/refer">
               <Refer></Refer>
             </Route>
-            <PrivateRoute path="/confirm-booking/:id">
-              <ConfirmBooking></ConfirmBooking>
-            </PrivateRoute>
+            
             <PrivateRoute path="/my-orders">
               <MyOrders></MyOrders>
             </PrivateRoute>

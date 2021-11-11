@@ -48,7 +48,7 @@ const Navbar = () => {
                                 <div className="hidden sm:block sm:ml-6">
                                     <div className="flex space-x-2">
                                         <NavLink to="/home" className="text-base text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md">Home</NavLink>
-                                        <NavLink to="/about" className="text-base text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md">About</NavLink>
+                                        <NavLink to="/inventory" className="text-base text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md">Explore Inventory</NavLink>
                                         <NavLink to="/refer" className="text-base text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md">Refer</NavLink>
 
                                         {user.email && navigation.map((item) => (

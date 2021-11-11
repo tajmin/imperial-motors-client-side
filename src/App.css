@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+.bg-styles {
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  height: 75vh;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

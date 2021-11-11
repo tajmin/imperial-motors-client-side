@@ -9,7 +9,7 @@ import useAuth from '../../../hooks/useAuth';
 const Register = () => {
     const [isLoading, setIsLoading] = useState(false);
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
-    const { emailRegistration, errorMessage } = useAuth();
+    const { emailRegistration, errorMessage, loading } = useAuth();
     const history = useHistory();
 
     const onSubmit = data => {
@@ -19,8 +19,10 @@ const Register = () => {
         }
         const { name, email, password } = data;
         emailRegistration(name, email, password, history);
-        setIsLoading(true);
-        reset();
+        if (loading) {
+            setIsLoading(true);
+            reset();
+        }
     };
 
     const handleGoogleLogin = () => {
