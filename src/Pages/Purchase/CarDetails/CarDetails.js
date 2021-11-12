@@ -20,7 +20,7 @@ const CarDetails = (prop) => {
         data.car = { id: _id, image1, title, price }
         data.status = false;
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://pacific-sands-70895.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

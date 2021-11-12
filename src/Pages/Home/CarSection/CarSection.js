@@ -13,7 +13,7 @@ const CarSection = () => {
                         cars.map(car => <Car
                             key={car._id}
                             car={car}
-                        ></Car>).slice(0, 5)
+                        ></Car>).slice(0, 6)
                     }
                 </div>
             </div>

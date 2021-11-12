@@ -8,11 +8,11 @@ const Purchase = () => {
     const [carDetails, setCarDetails] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/cars/${id}`)
+        fetch(`https://pacific-sands-70895.herokuapp.com/cars/${id}`)
             .then(res => res.json())
             .then(data => {
                 setCarDetails(data);
-                //reset(data);
+
                 //setIsLoading(false);
             });
     }, [])

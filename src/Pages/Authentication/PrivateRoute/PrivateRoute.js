@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Redirect, Route } from 'react-router';
 import useAuth from '../../../hooks/useAuth';
-import { css } from "@emotion/react";
 import ClipLoader from "react-spinners/RiseLoader";
 
 const PrivateRoute = ({ children, ...rest }) => {
