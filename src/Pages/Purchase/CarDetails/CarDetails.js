@@ -29,9 +29,8 @@ const CarDetails = (prop) => {
         })
             .then(res => res.json())
             .then(result => {
-                // console.log(result);
+                setOpen(false);
                 if (result.insertedId) {
-                    setOpen(false);
                     alert('order processed successfully!');
                     reset();
                 }
