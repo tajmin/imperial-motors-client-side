@@ -65,7 +65,7 @@ const MyOrders = () => {
                                         </div>
                                     </div>
                                 </td>
-                                <td>{item.status ? 'Approved' : 'Pending'}</td>
+                                <td>{item.status ? 'Shipped' : 'Pending'}</td>
                                 <td>
                                     {item.email}
                                     <br />

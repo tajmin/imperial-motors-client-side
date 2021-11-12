@@ -9,7 +9,6 @@ import useAuth from '../../../hooks/useAuth';
 
 const navigation = [
     { name: 'Dashboard', to: '/dashboard', current: false },
-    { name: 'Manage Orders', to: '/manage-orders', current: false }
 ]
 
 function classNames(...classes) {
