@@ -6,7 +6,7 @@ const UserReviews = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://pacific-sands-70895.herokuapp.com/reviews')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
@@ -14,7 +14,7 @@ const UserReviews = () => {
     return (
         <div className="bg-gray-100">
             <div className="xl:p-20">
-                <h1 className="xl:text-6xl font-bold font-serif text-gray-600">User Reviews</h1>
+                <h1 className="text-2xl xl:text-6xl font-bold font-serif text-gray-600">Client Reviews</h1>
             </div>
             <div className="container max-w-6xl mx-auto xl:py-10 bg-white rounded-xl shadow-xl">
                 <div className="grid grid-cols-1 xl:grid-cols-2 p-16 gap-12">
