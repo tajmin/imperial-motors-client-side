@@ -8,6 +8,7 @@ import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import AdminRoute from '../../Authentication/AdminRoute/AdminRoute';
 import ManageCars from '../ManageCars/ManageCars';
 import AddCar from '../AddCar/AddCar';
+import ManageOrders from '../ManageOrders/ManageOrders';
 
 
 const Dashboard = () => {
@@ -30,6 +31,7 @@ const Dashboard = () => {
                                 <>
                                     <NavLink to={`${url}/add-car`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Add Car</button></NavLink>
                                     <NavLink to={`${url}/manage-cars`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Manage Cars</button></NavLink>
+                                    <NavLink to={`${url}/manage-orders`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Manage Orders</button></NavLink>
                                     <NavLink to={`${url}/make-admin`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Make Admin</button></NavLink>
                                 </>
                         }
@@ -54,6 +56,9 @@ const Dashboard = () => {
                         </AdminRoute>
                         <AdminRoute path={`${path}/manage-cars`}>
                             <ManageCars></ManageCars>
+                        </AdminRoute>
+                        <AdminRoute path={`${path}/manage-orders`}>
+                            <ManageOrders></ManageOrders>
                         </AdminRoute>
                         <AdminRoute path={`${path}/add-car`}>
                             <AddCar></AddCar>

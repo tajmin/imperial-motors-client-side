@@ -17,7 +17,7 @@ const MyOrders = () => {
     }, [])
 
     const handleCancellation = (id) => {
-        const confirmDelete = window.confirm('Confirm cancell this booking?');
+        const confirmDelete = window.confirm('Confirm cancel this booking?');
         if (confirmDelete) {
             fetch(`https://pacific-sands-70895.herokuapp.com/orders/${id}`, {
                 method: 'DELETE'
@@ -27,7 +27,7 @@ const MyOrders = () => {
                     if (data.deletedCount) {
                         const restOrders = myOrders.filter(item => item._id !== id);
                         setMyOrders(restOrders);
-                        alert('Booking Cancelled Successfully.');
+                        alert('Order Cancelled Successfully.');
                     }
                 });
         }

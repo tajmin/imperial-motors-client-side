@@ -19,7 +19,7 @@ const MakeAdmin = () => {
         })
             .then(res => res.json())
             .then(result => {
-                if (result.modifiedCount) {
+                if (result.modifiedCount > 0) {
                     alert('Made Admin successfully!');
                     reset();
                 }
