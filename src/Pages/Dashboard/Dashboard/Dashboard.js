@@ -6,6 +6,8 @@ import Payment from '../Payment/Payment';
 import useAuth from '../../../hooks/useAuth';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import AdminRoute from '../../Authentication/AdminRoute/AdminRoute';
+import ManageCars from '../ManageCars/ManageCars';
+import AddCar from '../AddCar/AddCar';
 
 
 const Dashboard = () => {
@@ -17,13 +19,19 @@ const Dashboard = () => {
             <div className="grid grid-cols-6">
                 <div className="bg-white min-h-screen col-span-2 xl:col-span-1 flex">
                     <div className="flex flex-col m-auto gap-4 w-2/3">
-                        <NavLink to={`${url}`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">My Orders</button></NavLink>
-                        <NavLink to={`${url}/submit-review`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Submit Review</button></NavLink>
-                        <NavLink to={`${url}/payment`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Pay Now</button></NavLink>
                         {
-                            isAdmin && <div>
-                                <NavLink to={`${url}/make-admin`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Make Admin</button></NavLink>
-                            </div>
+                            !isAdmin ? <>
+                                <NavLink to={`${url}`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">My Orders</button></NavLink>
+                                <NavLink to={`${url}/submit-review`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Submit Review</button></NavLink>
+                                <NavLink to={`${url}/payment`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Pay Now</button></NavLink>
+
+                            </> :
+
+                                <>
+                                    <NavLink to={`${url}/add-car`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Add Car</button></NavLink>
+                                    <NavLink to={`${url}/manage-cars`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Manage Cars</button></NavLink>
+                                    <NavLink to={`${url}/make-admin`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Make Admin</button></NavLink>
+                                </>
                         }
 
                         <NavLink to="/"><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Go to Home</button></NavLink>
@@ -41,8 +49,14 @@ const Dashboard = () => {
                         <Route path={`${path}/payment`}>
                             <Payment></Payment>
                         </Route>
-                        <AdminRoute exact path={`${path}/make-admin`}>
+                        <AdminRoute path={`${path}/make-admin`}>
                             <MakeAdmin></MakeAdmin>
+                        </AdminRoute>
+                        <AdminRoute path={`${path}/manage-cars`}>
+                            <ManageCars></ManageCars>
+                        </AdminRoute>
+                        <AdminRoute path={`${path}/add-car`}>
+                            <AddCar></AddCar>
                         </AdminRoute>
                     </Switch>
                 </div>
