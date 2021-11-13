@@ -2,12 +2,16 @@ import React, { useEffect, useState } from 'react';
 import useAuth from '../../../hooks/useAuth';
 
 const MyOrders = () => {
-    const { user } = useAuth();
+    const { user, authToken } = useAuth();
     const [myOrders, setMyOrders] = useState([]);
 
     useEffect(() => {
-        const url = `https://pacific-sands-70895.herokuapp.com/orders?email=${user.email}`
-        fetch(url)
+        const url = `https://pacific-sands-70895.herokuapp.com/orders/${user.email}`
+        fetch(url, {
+            headers: {
+                'authorization': `Bearer ${authToken}`
+            }
+        })
             .then(res => res.json())
             .then(data => setMyOrders(data))
     }, [])

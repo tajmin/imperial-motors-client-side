@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, getIdToken } from "firebase/auth";
 
 import initAuth from "../Firebase/firebase.init";
 
@@ -9,6 +9,8 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [loading, setLoading] = useState(true);
     const [errorMessage, setErrorMessage] = useState('');
+    const [authToken, setAuthToken] = useState('');
+    const [isAdmin, setIsAdmin] = useState(false);
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
@@ -28,7 +30,7 @@ const useFirebase = () => {
                 }).then(() => {
                 }).catch((error) => {
                 });
-                history.push('/');
+                history.push('/dashboard');
             })
             .catch((error) => {
                 setErrorMessage(error.message);
@@ -42,7 +44,7 @@ const useFirebase = () => {
         setLoading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                const destination = location?.state?.from || '/';
+                const destination = location?.state?.from || '/dashboard';
                 history.push(destination);
                 setErrorMessage('');
             })
@@ -78,15 +80,22 @@ const useFirebase = () => {
             .then()
     }
 
+    //Admin observer
+    useEffect(() => {
+        fetch(`https://pacific-sands-70895.herokuapp.com/users/${user.email}`)
+            .then(res => res.json())
+            .then(data => setIsAdmin(data.admin))
+    }, [user.email])
+
     //observer 
     useEffect(() => {
         const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
-                // getIdToken(user)
-                //     .then(idToken => {
-                //         setToken(idToken);
-                //     })
+                getIdToken(user)
+                    .then(idToken => {
+                        setAuthToken(idToken);
+                    })
             } else {
                 setUser({})
             }
@@ -95,7 +104,7 @@ const useFirebase = () => {
         return () => unsubscribed;
     }, [])
 
-    return { user, loading, errorMessage, emailRegistration, emailLogin, signInUsingGoogle, logOut }
+    return { user, loading, errorMessage, isAdmin, authToken, emailRegistration, emailLogin, signInUsingGoogle, logOut }
 
 }
 

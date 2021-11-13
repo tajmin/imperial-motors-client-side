@@ -1,16 +1,18 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import useAuth from '../../../hooks/useAuth';
 
 const MakeAdmin = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
+    const { authToken } = useAuth();
 
     const handleForm = data => {
-        //https://pacific-sands-70895.herokuapp.com/
         const user = { email: data.email }
 
-        fetch('http://localhost:5000/users/admin', {
+        fetch('https://pacific-sands-70895.herokuapp.com/users/admin', {
             method: 'PUT',
             headers: {
+                'authorization': `Bearer ${authToken}`,
                 'content-type': 'application/json'
             },
             body: JSON.stringify(user)

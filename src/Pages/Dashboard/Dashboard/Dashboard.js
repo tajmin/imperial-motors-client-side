@@ -5,10 +5,11 @@ import SubmitReview from '../SubmitReview/SubmitReview';
 import Payment from '../Payment/Payment';
 import useAuth from '../../../hooks/useAuth';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
+import AdminRoute from '../../Authentication/AdminRoute/AdminRoute';
 
 
 const Dashboard = () => {
-    const { logOut } = useAuth();
+    const { logOut, isAdmin } = useAuth();
     let { path, url } = useRouteMatch();
 
     return (
@@ -19,8 +20,12 @@ const Dashboard = () => {
                         <NavLink to={`${url}`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">My Orders</button></NavLink>
                         <NavLink to={`${url}/submit-review`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Submit Review</button></NavLink>
                         <NavLink to={`${url}/payment`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Pay Now</button></NavLink>
+                        {
+                            isAdmin && <div>
+                                <NavLink to={`${url}/make-admin`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Make Admin</button></NavLink>
+                            </div>
+                        }
 
-                        <NavLink to={`${url}/make-admin`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Make Admin</button></NavLink>
                         <NavLink to="/"><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Go to Home</button></NavLink>
                         <button onClick={logOut} className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Log Out</button>
                     </div>
@@ -36,9 +41,9 @@ const Dashboard = () => {
                         <Route path={`${path}/payment`}>
                             <Payment></Payment>
                         </Route>
-                        <Route path={`${path}/make-admin`}>
+                        <AdminRoute exact path={`${path}/make-admin`}>
                             <MakeAdmin></MakeAdmin>
-                        </Route>
+                        </AdminRoute>
                     </Switch>
                 </div>
             </div>
