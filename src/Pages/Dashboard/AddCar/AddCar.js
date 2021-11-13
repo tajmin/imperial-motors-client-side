@@ -22,8 +22,10 @@ const AddCar = () => {
     };
 
     return (
-        <div className="bg-gray-200">
-            <h1>Add A New Car</h1>
+        <div>
+            <div className="py-6 bg-black">
+                <h1 className="text-2xl xl:text-5xl font-bold text-gray-200">Add New Car</h1>
+            </div>
             <div className="container flex h-screen mx-auto">
                 <div className="container m-auto max-w-2xl text-left">
                     <form onSubmit={handleSubmit(onSubmit)}>

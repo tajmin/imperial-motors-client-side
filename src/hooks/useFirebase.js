@@ -102,7 +102,7 @@ const useFirebase = () => {
             setLoading(false);
         });
         return () => unsubscribed;
-    }, [])
+    }, [auth])
 
     return { user, loading, errorMessage, isAdmin, authToken, emailRegistration, emailLogin, signInUsingGoogle, logOut }
 

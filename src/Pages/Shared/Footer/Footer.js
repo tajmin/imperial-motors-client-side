@@ -1,10 +1,9 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import logo from '../../../images/logo.png'
 
 const Footer = () => {
     return (
-        <footer data-theme="dracula" class="p-10 footer bg-base-200 text-base-content">
+        <footer data-theme="dracula" className="p-10 footer bg-base-200 text-base-content">
             <div>
                 <img className="w-3/4" src={logo} alt="" />
                 <p className="text-left pt-2">Imperial Motors Ltd.
@@ -12,24 +11,24 @@ const Footer = () => {
                 </p>
             </div>
             <div>
-                <span class="footer-title">Services</span>
-                <button class="link link-hover">Branding</button>
-                <button class="link link-hover">Design</button>
-                <button class="link link-hover">Marketing</button>
-                <button class="link link-hover">Advertisement</button>
+                <span className="footer-title">Services</span>
+                <button className="link link-hover">Branding</button>
+                <button className="link link-hover">Design</button>
+                <button className="link link-hover">Marketing</button>
+                <button className="link link-hover">Advertisement</button>
             </div>
             <div>
-                <span class="footer-title">Company</span>
-                <button class="link link-hover">About us</button>
-                <button class="link link-hover">Contact</button>
-                <button class="link link-hover">Jobs</button>
-                <button class="link link-hover">Press kit</button>
+                <span className="footer-title">Company</span>
+                <button className="link link-hover">About us</button>
+                <button className="link link-hover">Contact</button>
+                <button className="link link-hover">Jobs</button>
+                <button className="link link-hover">Press kit</button>
             </div>
             <div>
-                <span class="footer-title">Legal</span>
-                <button class="link link-hover">Terms of use</button>
-                <button class="link link-hover">Privacy policy</button>
-                <button class="link link-hover">Cookie policy</button>
+                <span className="footer-title">Legal</span>
+                <button className="link link-hover">Terms of use</button>
+                <button className="link link-hover">Privacy policy</button>
+                <button className="link link-hover">Cookie policy</button>
             </div>
         </footer>
     );

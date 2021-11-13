@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import useAuth from '../../../hooks/useAuth';
 
 const CarDetails = (prop) => {
-    const { _id, title, price, year, engine, exterior, description, image1, image2 } = prop.carDetails;
+    const { _id, title, price, year, engine, exterior, description, image1 } = prop.carDetails;
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const { user } = useAuth();
     const [open, setOpen] = useState(false);

@@ -15,7 +15,7 @@ const Purchase = () => {
 
                 //setIsLoading(false);
             });
-    }, [])
+    }, [id])
 
     return (
         <div>

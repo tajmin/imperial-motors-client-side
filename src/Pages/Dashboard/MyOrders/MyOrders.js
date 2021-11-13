@@ -14,7 +14,7 @@ const MyOrders = () => {
         })
             .then(res => res.json())
             .then(data => setMyOrders(data))
-    }, [])
+    }, [user.email, authToken])
 
     const handleCancellation = (id) => {
         const confirmDelete = window.confirm('Confirm cancel this booking?');
@@ -35,6 +35,9 @@ const MyOrders = () => {
 
     return (
         <div>
+            <div className="py-6 bg-black">
+                <h1 className="text-2xl xl:text-5xl font-bold text-gray-200">My Orders</h1>
+            </div>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>

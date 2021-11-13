@@ -23,7 +23,7 @@ const Car = ({ car }) => {
                     <h4><FontAwesomeIcon icon={faCalendar} /> {year} Model</h4>
                 </div>
                 <p className="text-gray-300 pb-4 xl:pb-10 text-sm xl:text-base xl:mb-10">{description.slice(0, 100)}..</p>
-                <button onClick={handleStartPurchase} className="transform transition-all bg-red-600 text-sm xl:text-xl text-gray-200 px-5 xl:px-8 py-1 xl:py-2 border border-gray-100 hover:border-black hover:bg-red-700">Start Purchase</button>
+                <button onClick={handleStartPurchase} className="transition-all duration-500 bg-red-600 text-sm xl:text-xl text-gray-200 px-5 xl:px-8 py-1 xl:py-2 border border-gray-100 hover:border-black hover:bg-red-700">Start Purchase</button>
             </div>
         </div>
     );

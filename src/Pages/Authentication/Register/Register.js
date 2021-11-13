@@ -23,10 +23,6 @@ const Register = () => {
         }
     };
 
-    const handleGoogleLogin = () => {
-        //google sign in
-    }
-
     return (
         <div className="container mx-auto min-h-screen flex">
             <div className="bg-black p-10 xl:p-16 m-auto w-full xl:w-1/3 text-left rounded-lg shadow-2xl">
@@ -59,9 +55,7 @@ const Register = () => {
                             <div className="my-3"><p className="text-red-700">{errorMessage}</p></div>
                         </form>
                         <p className="text-white">Already Registered? <NavLink className="underline hover:text-black" to="/login">Sign in</NavLink></p>
-                        <div className="mt-5">
-                            <button onClick={handleGoogleLogin} className="px-8 bg-black text-white py-2 hover:bg-white hover:text-black rounded"> Google Sign In</button>
-                        </div></>
+                    </>
                 }
 
             </div>

@@ -22,22 +22,22 @@ const Dashboard = () => {
                     <div className="flex flex-col m-auto gap-4 w-2/3">
                         {
                             !isAdmin ? <>
-                                <NavLink to={`${url}`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">My Orders</button></NavLink>
+                                <NavLink to={`${url}`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900 transition-all duration-500 hover:bg-black hover:text-white hover:border-white">My Orders</button></NavLink>
                                 <NavLink to={`${url}/submit-review`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Submit Review</button></NavLink>
                                 <NavLink to={`${url}/payment`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Pay Now</button></NavLink>
 
                             </> :
 
                                 <>
-                                    <NavLink to={`${url}/add-car`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Add Car</button></NavLink>
-                                    <NavLink to={`${url}/manage-cars`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Manage Cars</button></NavLink>
-                                    <NavLink to={`${url}/manage-orders`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Manage Orders</button></NavLink>
-                                    <NavLink to={`${url}/make-admin`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Make Admin</button></NavLink>
+                                    <NavLink to={`${url}/add-car`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900 transition-all duration-500 hover:bg-black hover:text-white hover:border-white">Add Car</button></NavLink>
+                                    <NavLink to={`${url}/manage-cars`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900 transition-all duration-500 hover:bg-black hover:text-white hover:border-white">Manage Cars</button></NavLink>
+                                    <NavLink to={`${url}/manage-orders`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900 transition-all duration-500 hover:bg-black hover:text-white hover:border-white">Manage Orders</button></NavLink>
+                                    <NavLink to={`${url}/make-admin`}><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900 transition-all duration-500 hover:bg-black hover:text-white hover:border-white">Make Admin</button></NavLink>
                                 </>
                         }
 
-                        <NavLink to="/"><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Go to Home</button></NavLink>
-                        <button onClick={logOut} className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900">Log Out</button>
+                        <NavLink to="/"><button className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900 transition-all duration-500 hover:bg-black hover:text-white hover:border-white">Go to Home</button></NavLink>
+                        <button onClick={logOut} className="w-full py-3 bg-blue-100 shadow-lg rounded-lg border border-gray-300 text-gray-900 transition-all duration-500 hover:bg-black hover:text-white hover:border-white">Log Out</button>
                     </div>
                 </div>
                 <div className="col-span-4 xl:col-span-5">

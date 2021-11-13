@@ -14,7 +14,7 @@ const ManageOrders = () => {
         })
             .then(res => res.json())
             .then(data => setAllOrders(data))
-    }, [])
+    }, [authToken])
 
     //order status set to approve
     const handleApproveOrder = (index) => {
@@ -59,7 +59,9 @@ const ManageOrders = () => {
 
     return (
         <div>
-            <h1>Manage All Orders</h1>
+            <div className="py-6 bg-black">
+                <h1 className="text-2xl xl:text-5xl font-bold text-gray-200">Manage Orders</h1>
+            </div>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>

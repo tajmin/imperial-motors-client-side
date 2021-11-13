@@ -39,8 +39,10 @@ const SubmitReview = () => {
 
     return (
         <div>
-            <h1 className="text-3xl text-white-500">Submit Review</h1>
-            <div className="container max-w-md xl:max-w-xl mx-auto">
+            <div className="py-6 bg-black">
+                <h1 className="text-2xl xl:text-5xl font-bold text-gray-200">Submit Review</h1>
+            </div>
+            <div className="container max-w-md xl:max-w-xl mx-auto py-5 xl:py-10">
                 <Rating emptySymbol="far fa-star rating-star" fullSymbol="fas fa-star rating-star" onChange={(rate) => handleStar(rate)} />
                 <form onSubmit={handleSubmit(handleForm)}>
                     <div className="py-4">

@@ -11,7 +11,7 @@ const SellCarSection = () => {
                 <div className="flex">
                     <div className="container max-w-3xl my-auto bg-red-600 xl:py-16 xl:px-10 xl:rounded-xl">
                         <h1 className="text-xl xl:text-5xl xl:font-bold text-white py-5 xl:py-10">Looking for an exchange deal?</h1>
-                        <button className="mb-2 border border-gray-400 bg-white hover:bg-black hover:text-white px-2 py-1 xl:px-4 xl:py-2 text-lg xl:text-xl rounded">Contact Us</button>
+                        <button className="mb-2 transition-all duration-500 border border-gray-400 bg-white hover:bg-black hover:border-black hover:text-white px-2 py-1 xl:px-4 xl:py-2 text-lg xl:text-xl rounded">Contact Us</button>
                     </div>
                 </div>
             </div>

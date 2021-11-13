@@ -28,7 +28,9 @@ const ManageCars = () => {
 
     return (
         <div>
-            <h1>Manage Cars</h1>
+            <div className="py-6 bg-black">
+                <h1 className="text-2xl xl:text-5xl font-bold text-gray-200">Manage Cars</h1>
+            </div>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>

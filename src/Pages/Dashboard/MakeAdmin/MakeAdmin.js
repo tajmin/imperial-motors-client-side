@@ -28,8 +28,10 @@ const MakeAdmin = () => {
 
     return (
         <div>
-            <h1 className="text-3xl text-white-500">Make Admin</h1>
-            <div className="container max-w-md xl:max-w-xl mx-auto">
+            <div className="py-6 bg-black">
+                <h1 className="text-2xl xl:text-5xl font-bold text-gray-200">Make Admin</h1>
+            </div>
+            <div className="container max-w-md xl:max-w-xl mx-auto py-10">
                 <form onSubmit={handleSubmit(handleForm)}>
                     <div className="py-4">
                         <input {...register("email", { required: true })} placeholder="Enter user email" className="w-full py-2 px-2 border-none rounded" type="email" name="email" />
