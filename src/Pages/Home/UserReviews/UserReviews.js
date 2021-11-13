@@ -12,7 +12,7 @@ const UserReviews = () => {
     }, [])
 
     return (
-        <div className="bg-gray-100">
+        <div className="bg-gray-100 pb-20">
             <div className="xl:p-20">
                 <h1 className="text-2xl xl:text-6xl font-bold font-serif text-gray-600">Client Reviews</h1>
             </div>
