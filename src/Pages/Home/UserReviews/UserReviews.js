@@ -12,12 +12,11 @@ const UserReviews = () => {
     }, [])
 
     return (
-        <div className="bg-gray-100 pb-20">
-            <div className="xl:p-20">
-                <h1 className="text-2xl xl:text-6xl font-bold font-serif text-gray-600">Client Reviews</h1>
-            </div>
-            <div className="container max-w-6xl mx-auto xl:py-10 bg-white rounded-xl shadow-xl">
-                <div className="grid grid-cols-1 xl:grid-cols-2 p-16 gap-12">
+        <div className="xl:bg-yellow-400 py-8 xl:py-16">
+            <h1 className="text-3xl xl:text-6xl font-bold text-gray-800 pt-10 mb-6 xl:mb-20">Client Reviews</h1>
+
+            <div className="container max-w-6xl mx-auto bg-white p-12 rounded-xl shadow-xl">
+                <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
                     {
                         reviews.map(item => <div key={item._id} className="bg-yellow-50 p-12 rounded-lg shadow-xl">
                             <div className="pb-6 flex flex-col gap-3">
