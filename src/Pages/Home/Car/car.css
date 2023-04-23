@@ -1,3 +1,77 @@
 .partial-bg {
-    background: linear-gradient(135deg, #fbbe24 75%, #000 25%);
+    background: linear-gradient(135deg, #fbbe24 75%, #fff 25%);
+    transition: all 1s;
+}
+
+.glow-shadow {
+    position: relative; 
+    transition: .5s;
+    border-radius: 5px;
+  }
+  
+  .glow-shadow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fbbe24;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+    border-radius: 5px;
+  }
+  
+  .glow-shadow:hover::before {
+    transform: scale(1.3);
+    box-shadow: 0 0 15px #fbbe24;
+  }
+  
+  .glow-shadow:hover {
+    color: #fbbe24;
+    box-shadow: 0 0 15px #fbbe24;
+    text-shadow: 0 0 5px #fbbe24;
+  }
+
+.car-image-wrap:after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    opacity: 0;
+    transform: rotate(30deg);
+  
+    background: rgb(251, 190, 36);
+    background: linear-gradient(
+      to right,
+      rgba(251, 190, 36, 0.13) 0%,
+      rgba(251, 190, 36, 0.13) 77%,
+      rgba(251, 190, 36, 0.5) 92%,
+      rgba(251, 190, 36, 0.0) 100%
+    );
+  }
+  
+  /* Hover state - trigger effect */
+  .car-image-wrap:hover:after {
+    opacity: 1;
+    left: 130%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+  }
+  
+  /* Active state */
+  .car-image-wrap:active:after {
+    opacity: 0;
+  }
+
+  .car-image-wrap img {
+      transition: all 0.5s;
+  }
+  
+  .car-image-wrap:hover img {
+    transform: scale(1.25);
 }

@@ -15,9 +15,9 @@ const Car = ({ car }) => {
     }
 
     return (
-        <div className='flex flex-1 flex-col xl:flex-row border-1 shadow-2xl xl:rounded-2xl'>
-            <div className="">
-                <img src={image1} className='xl:rounded-l-2xl' alt="" />
+        <div className='flex flex-1 flex-col xl:flex-row border-1 shadow-2xl xl:rounded-2xl cursor-pointer'>
+            <div className="overflow-hidden relative glow-shadow car-image-wrap">
+                <img src={image1} className='xl:rounded-l-2xl border border-gray-800' alt="" />
             </div>
             <div className="partial-bg py-4 xl:w-9/12 text-left pl-8 xl:pl-10 pr-12 xl:rounded-r-2xl">
                 <h1 className="text-2xl xl:text-4xl text-gray-900 font-bold xl:py-6 mb-2">{title}</h1>

@@ -13,7 +13,7 @@ const CarSection = () => {
                 <div className='w-16 xl:w-24 h-5 transition-all duration-300 transform hover:scale-x-150 border-0 border-t-4 border-yellow-400 mx-auto'></div>
                 <div className='w-6 xl:w-12 h-5 transition-all duration-300 transform hover:scale-x-150 border-0 border-t-4 border-yellow-400 mx-auto'></div>
             </div>
-            <div className="container max-w-7xl mx-auto">
+            <div className="container max-w-7xl mx-auto px-4">
                 <div className="grid grid-cols-1 gap-16">
                     {
                         cars.map(car => <Car
