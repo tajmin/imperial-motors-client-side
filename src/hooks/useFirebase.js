@@ -80,7 +80,7 @@ const useFirebase = () => {
   };
 
   const saveUserToDB = (user, method) => {
-    fetch("https://imperial-motors-server.up.railway.app/users", {
+    fetch("https://imperial-motors-serverside.vercel.app/users", {
       method: method,
       headers: {
         "content-type": "application/json",
@@ -91,7 +91,7 @@ const useFirebase = () => {
 
   //Admin observer
   useEffect(() => {
-    fetch(`https://imperial-motors-server.up.railway.app/users/${user.email}`)
+    fetch(`https://imperial-motors-serverside.vercel.app/users/${user.email}`)
       .then((res) => res.json())
       .then((data) => setIsAdmin(data.admin));
   }, [user.email]);

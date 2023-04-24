@@ -6,7 +6,7 @@ const UserReviews = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetch("https://imperial-motors-server.up.railway.app/reviews")
+    fetch("https://imperial-motors-serverside.vercel.app/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);

@@ -8,7 +8,7 @@ const Purchase = () => {
   const [carDetails, setCarDetails] = useState({});
 
   useEffect(() => {
-    fetch(`https://imperial-motors-server.up.railway.app/cars/${id}`)
+    fetch(`https://imperial-motors-serverside.vercel.app/cars/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setCarDetails(data);

@@ -10,7 +10,7 @@ const AddCar = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch("https://imperial-motors-server.up.railway.app/cars", {
+    fetch("https://imperial-motors-serverside.vercel.app/cars", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -14,7 +14,7 @@ const MakeAdmin = () => {
   const handleForm = (data) => {
     const user = { email: data.email };
 
-    fetch("https://imperial-motors-server.up.railway.app/users/admin", {
+    fetch("https://imperial-motors-serverside.vercel.app/users/admin", {
       method: "PUT",
       headers: {
         authorization: `Bearer ${authToken}`,

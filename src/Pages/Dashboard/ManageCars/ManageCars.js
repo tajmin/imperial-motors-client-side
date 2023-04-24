@@ -9,7 +9,7 @@ const ManageCars = () => {
   const handleDeletion = (id) => {
     const confirmDelete = window.confirm("Confirm delete this car?");
     if (confirmDelete) {
-      fetch(`https://imperial-motors-server.up.railway.app/cars/${id}`, {
+      fetch(`https://imperial-motors-serverside.vercel.app/cars/${id}`, {
         method: "DELETE",
         headers: {
           authorization: `Bearer ${authToken}`,

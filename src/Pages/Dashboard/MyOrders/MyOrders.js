@@ -6,7 +6,7 @@ const MyOrders = () => {
   const [myOrders, setMyOrders] = useState([]);
 
   useEffect(() => {
-    const url = `https://imperial-motors-server.up.railway.app/orders/${user.email}`;
+    const url = `https://imperial-motors-serverside.vercel.app/orders/${user.email}`;
     fetch(url, {
       headers: {
         authorization: `Bearer ${authToken}`,
@@ -19,7 +19,7 @@ const MyOrders = () => {
   const handleCancellation = (id) => {
     const confirmDelete = window.confirm("Confirm cancel this booking?");
     if (confirmDelete) {
-      fetch(`https://imperial-motors-server.up.railway.app/orders/${id}`, {
+      fetch(`https://imperial-motors-serverside.vercel.app/orders/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

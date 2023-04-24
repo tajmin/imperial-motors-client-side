@@ -26,7 +26,7 @@ const CarDetails = (prop) => {
     data.car = { id: _id, image1, title, price };
     data.status = false;
 
-    fetch("https://imperial-motors-server.up.railway.app/orders", {
+    fetch("https://imperial-motors-serverside.vercel.app/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",

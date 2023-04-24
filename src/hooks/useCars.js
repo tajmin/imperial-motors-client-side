@@ -4,7 +4,7 @@ const useCars = () => {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
-    fetch("https://imperial-motors-server.up.railway.app/cars")
+    fetch("https://imperial-motors-serverside.vercel.app/cars")
       .then((res) => res.json())
       .then((data) => setCars(data));
   }, []);

@@ -26,7 +26,7 @@ const SubmitReview = () => {
       thumb: user.photoURL,
     };
 
-    fetch("https://imperial-motors-server.up.railway.app/reviews", {
+    fetch("https://imperial-motors-serverside.vercel.app/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",
